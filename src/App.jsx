@@ -1,3 +1,19 @@
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Features from "./components/Features";
+import DesignAndPhotography from "./components/DesignAndPhotography";
+import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
+
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <>
+      <Header />
+      <Hero />
+      <Features />
+      <DesignAndPhotography />
+      <Testimonials />
+      <Footer />
+    </>
+  );
 }
