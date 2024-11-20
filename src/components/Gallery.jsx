@@ -12,35 +12,35 @@ const images = [
     id: 1,
     mobileSrc: milkbottlesMobile,
     desktopSrc: milkbottlesDesktop,
-    altText: "Milkbottles image",
+    alt: "Milkbottles image",
   },
   {
     id: 2,
     mobileSrc: orangeMobile,
     desktopSrc: orangeDesktop,
-    altText: "Orange image",
+    alt: "Orange image",
   },
   {
     id: 3,
     mobileSrc: coneMobile,
     desktopSrc: coneDesktop,
-    altText: "Cone image",
+    alt: "Cone image",
   },
   {
     id: 4,
     mobileSrc: sugarcubesMobile,
     desktopSrc: sugarcubesDesktop,
-    altText: "Sugarcubes image",
+    alt: "Sugarcubes image",
   },
 ];
 
 export default function Gallery() {
   return (
     <section>
-      {images.map(({ id, mobileSrc, desktopSrc, altText }) => (
+      {images.map(({ id, mobileSrc, desktopSrc, alt }) => (
         <picture key={id}>
           <source srcSet={desktopSrc} media="(min-width: 600px)" />
-          <img src={mobileSrc} alt={altText} />
+          <img src={mobileSrc} alt={alt} />
         </picture>
       ))}
     </section>
