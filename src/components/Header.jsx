@@ -1,5 +1,5 @@
-import logo_image from ".././assets/images/logo.svg";
-import hamburger_icon from ".././assets/images/icon-hamburger.svg";
+import logo from "../assets/images/logo-header.svg";
+import hamburgerIcon from "../assets/images/icon-hamburger.svg";
 
 const links = [
   { id: 1, name: "About", url: "/" },
@@ -10,21 +10,21 @@ const links = [
 export default function Header() {
   return (
     <header>
-      {/* logo */}
+      {/* Logo */}
       <a href="/">
-        <img src={logo_image} alt="sunnyside logo" width="124" height="24" />
+        <img src={logo} alt="Sunnyside logo" />
       </a>
-      {/* menu toggler */}
+      {/* Menu Toggler */}
       <button>
-        <img src={hamburger_icon} alt="Menu toggler" width="24" height="18" />
+        <img src={hamburgerIcon} alt="Menu toggler" />
         <p>Menu</p>
       </button>
-      {/* menu */}
+      {/* Menu */}
       <nav>
         <ul>
-          {links.map((link) => (
-            <li key={link.id}>
-              <a href={link.url}>{link.name}</a>
+          {links.map(({ id, name, url }) => (
+            <li key={id}>
+              <a href={url}>{name}</a>
             </li>
           ))}
           <li>
