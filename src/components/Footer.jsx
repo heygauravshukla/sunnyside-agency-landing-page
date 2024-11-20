@@ -14,10 +14,10 @@ const navigationLinks = [
 
 // Social media links
 const socialMediaLinks = [
-  { id: 1, icon: facebookIcon, href: "/", altText: "Facebook logo" },
-  { id: 2, icon: instagramIcon, href: "/", altText: "Instagram logo" },
-  { id: 3, icon: twitterIcon, href: "/", altText: "Twitter logo" },
-  { id: 4, icon: pinterestIcon, href: "/", altText: "Pinterest logo" },
+  { id: 1, icon: facebookIcon, href: "/", alt: "Facebook logo" },
+  { id: 2, icon: instagramIcon, href: "/", alt: "Instagram logo" },
+  { id: 3, icon: twitterIcon, href: "/", alt: "Twitter logo" },
+  { id: 4, icon: pinterestIcon, href: "/", alt: "Pinterest logo" },
 ];
 
 export default function Footer() {
@@ -41,10 +41,10 @@ export default function Footer() {
 
       {/* Social Media Links */}
       <ul>
-        {socialMediaLinks.map(({ id, icon, href, altText }) => (
+        {socialMediaLinks.map(({ id, icon, href, alt }) => (
           <li key={id}>
             <a href={href}>
-              <img src={icon} alt={altText} />
+              <img src={icon} alt={alt} />
             </a>
           </li>
         ))}
