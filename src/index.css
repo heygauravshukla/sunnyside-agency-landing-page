@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-soft-red: 7 99% 70%;
+    --color-yellow: 51 100% 49%;
+    --color-dark-desaturated-cyan: 167 40% 24%;
+    --color-dark-blue: 198 62% 26%;
+    --color-dark-moderate-cyan: 168 34% 41%;
+    --color-very-dark-desaturated-blue: 212 27% 19%;
+    --color-very-dark-grayish-blue: 213 9% 39%;
+    --color-dark-grayish-blue: 232 10% 55%;
+    --color-grayish-blue: 210 4% 67%;
+    --color-white: 0 0% 100%;
+  }
+}
