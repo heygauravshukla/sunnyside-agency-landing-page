@@ -17,6 +17,10 @@ export default {
       "grayish-blue": "hsl(var(--color-grayish-blue))",
       white: "hsl(var(--color-white))",
     },
+    fontFamily: {
+      sans: ["Barlow", "sans-serif"],
+      serif: ["Fraunces", "serif"],
+    },
     extend: {},
   },
   plugins: [],

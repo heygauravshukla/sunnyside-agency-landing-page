@@ -3,6 +3,28 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-display: swap;
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 600;
+    src: url("./assets/fonts/barlow-v12-latin-600.woff2") format("woff2");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./assets/fonts/fraunces-v31-latin-700.woff2") format("woff2");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    src: url("./assets/fonts/fraunces-v31-latin-900.woff2") format("woff2");
+  }
+
   :root {
     --color-soft-red: 7 99% 70%;
     --color-yellow: 51 100% 49%;
