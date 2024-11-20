@@ -3,16 +3,16 @@ import graphicDesignDesktop from "../assets/images/desktop/image-graphic-design.
 import photographyMobile from "../assets/images/mobile/image-photography.jpg";
 import photographyDesktop from "../assets/images/desktop/image-photography.jpg";
 
-function Card({ mobileImage, desktopImage, altText, title, description }) {
+function Card({ mobileImage, desktopImage, alt, heading, paragraph }) {
   return (
     <div>
       <picture>
         <source srcSet={desktopImage} media="(min-width: 600px)" />
-        <img src={mobileImage} alt={altText} />
+        <img src={mobileImage} alt={alt} />
       </picture>
       <div>
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <h3>{heading}</h3>
+        <p>{paragraph}</p>
       </div>
     </div>
   );
@@ -24,16 +24,16 @@ export default function DesignAndPhotography() {
       <Card
         mobileImage={graphicDesignMobile}
         desktopImage={graphicDesignDesktop}
-        altText="Graphic design image"
-        title="Graphic design"
-        description="Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention."
+        alt="Graphic design image"
+        heading="Graphic design"
+        paragraph="Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention."
       />
       <Card
         mobileImage={photographyMobile}
         desktopImage={photographyDesktop}
-        altText="Photography design image"
-        title="Photography"
-        description="Increase your credibility by getting the most stunning, high-quality photos that improve your business image."
+        alt="Photography design image"
+        heading="Photography"
+        paragraph="Increase your credibility by getting the most stunning, high-quality photos that improve your business image."
       />
     </section>
   );
