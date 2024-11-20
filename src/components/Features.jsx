@@ -1,7 +1,7 @@
-import transform_mobile from "../assets/images/mobile/image-transform.jpg";
-import transform_desktop from "../assets/images/desktop/image-transform.jpg";
-import standout_mobile from "../assets/images/mobile/image-stand-out.jpg";
-import standout_desktop from "../assets/images/desktop/image-stand-out.jpg";
+import transformMobile from "../assets/images/mobile/image-transform.jpg";
+import transformDesktop from "../assets/images/desktop/image-transform.jpg";
+import standoutMobile from "../assets/images/mobile/image-stand-out.jpg";
+import standoutDesktop from "../assets/images/desktop/image-stand-out.jpg";
 
 function TextBox({ title, description, url }) {
   return (
@@ -13,11 +13,11 @@ function TextBox({ title, description, url }) {
   );
 }
 
-function ImageBox({ mobile_image, desktop_image, alternative_text }) {
+function ImageBox({ mobileImage, desktopImage, altText }) {
   return (
     <picture>
-      <source srcSet={desktop_image} media="(min-width: 600px)" />
-      <img src={mobile_image} alt={alternative_text} />
+      <source srcSet={desktopImage} media="(min-width: 600px)" />
+      <img src={mobileImage} alt={altText} />
     </picture>
   );
 }
@@ -33,14 +33,14 @@ export default function Features() {
         url="/"
       />
       <ImageBox
-        mobile_image={transform_mobile}
-        desktop_image={transform_desktop}
-        alternative_text="Transform image"
+        mobileImage={transformMobile}
+        desktopImage={transformDesktop}
+        altText="Transform image"
       />
       <ImageBox
-        mobile_image={standout_mobile}
-        desktop_image={standout_desktop}
-        alternative_text="Stand out image"
+        mobileImage={standoutMobile}
+        desktopImage={standoutDesktop}
+        altText="Stand out image"
       />
       <TextBox
         title="Stand out to the right audience"
