@@ -2,9 +2,9 @@ import logo from "../assets/images/logo-header.svg";
 import hamburgerIcon from "../assets/images/icon-hamburger.svg";
 
 const links = [
-  { id: 1, name: "About", url: "/" },
-  { id: 2, name: "Services", url: "/" },
-  { id: 3, name: "Projects", url: "/" },
+  { id: 1, text: "About", href: "/" },
+  { id: 2, text: "Services", href: "/" },
+  { id: 3, text: "Projects", href: "/" },
 ];
 
 export default function Header() {
@@ -22,9 +22,9 @@ export default function Header() {
       {/* Menu */}
       <nav>
         <ul>
-          {links.map(({ id, name, url }) => (
+          {links.map(({ id, text, href }) => (
             <li key={id}>
-              <a href={url}>{name}</a>
+              <a href={href}>{text}</a>
             </li>
           ))}
           <li>
