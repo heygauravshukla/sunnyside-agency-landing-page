@@ -7,17 +7,17 @@ import pinterestIcon from "../assets/images/icon-pinterest.svg";
 
 // Navigation links
 const navigationLinks = [
-  { id: 1, label: "About", url: "/" },
-  { id: 2, label: "Services", url: "/" },
-  { id: 3, label: "Projects", url: "/" },
+  { id: 1, text: "About", href: "/" },
+  { id: 2, text: "Services", href: "/" },
+  { id: 3, text: "Projects", href: "/" },
 ];
 
 // Social media links
 const socialMediaLinks = [
-  { id: 1, icon: facebookIcon, url: "/", altText: "Facebook logo" },
-  { id: 2, icon: instagramIcon, url: "/", altText: "Instagram logo" },
-  { id: 3, icon: twitterIcon, url: "/", altText: "Twitter logo" },
-  { id: 4, icon: pinterestIcon, url: "/", altText: "Pinterest logo" },
+  { id: 1, icon: facebookIcon, href: "/", altText: "Facebook logo" },
+  { id: 2, icon: instagramIcon, href: "/", altText: "Instagram logo" },
+  { id: 3, icon: twitterIcon, href: "/", altText: "Twitter logo" },
+  { id: 4, icon: pinterestIcon, href: "/", altText: "Pinterest logo" },
 ];
 
 export default function Footer() {
@@ -31,9 +31,9 @@ export default function Footer() {
       {/* Navigation */}
       <nav>
         <ul>
-          {navigationLinks.map(({ id, label, url }) => (
+          {navigationLinks.map(({ id, text, href }) => (
             <li key={id}>
-              <a href={url}>{label}</a>
+              <a href={href}>{text}</a>
             </li>
           ))}
         </ul>
@@ -41,9 +41,9 @@ export default function Footer() {
 
       {/* Social Media Links */}
       <ul>
-        {socialMediaLinks.map(({ id, icon, url, altText }) => (
+        {socialMediaLinks.map(({ id, icon, href, altText }) => (
           <li key={id}>
-            <a href={url}>
+            <a href={href}>
               <img src={icon} alt={altText} />
             </a>
           </li>
