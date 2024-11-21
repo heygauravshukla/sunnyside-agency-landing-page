@@ -1,3 +1,4 @@
+import { useState } from "react";
 import logo from "../assets/images/logo-header.svg";
 import hamburgerIcon from "../assets/images/icon-hamburger.svg";
 
@@ -8,27 +9,41 @@ const links = [
 ];
 
 export default function Header() {
+  const [isMenuOpened, setIsMenuOpened] = useState(false);
+
   return (
-    <header>
+    <header className="relative flex items-center justify-between px-[22px] py-8 lg:px-10 lg:py-11">
       {/* Logo */}
       <a href="/">
-        <img src={logo} alt="Sunnyside logo" />
+        <img src={logo} alt="Sunnyside logo" className="lg:h-8 lg:w-auto" />
       </a>
       {/* Menu Toggler */}
-      <button>
+      <button onClick={() => setIsMenuOpened((m) => !m)} className="lg:hidden">
         <img src={hamburgerIcon} alt="Menu toggler" />
-        <p>Menu</p>
+        <p className="sr-only">Menu</p>
       </button>
       {/* Menu */}
-      <nav>
-        <ul>
+      <nav
+        className={`${!isMenuOpened ? "hidden lg:block" : ""} absolute inset-x-[22px] top-full mt-4 bg-white p-10 before:absolute before:bottom-full before:right-0 before:block before:size-6 before:bg-white before:content-[''] before:[clip-path:polygon(100%_0%,0%_100%,100%_100%)] lg:static lg:mt-0 lg:bg-transparent lg:p-0 lg:before:hidden`}
+      >
+        <ul className="flex flex-col items-center gap-8 lg:flex-row lg:gap-12">
           {links.map(({ id, text, href }) => (
             <li key={id}>
-              <a href={href}>{text}</a>
+              <a
+                href={href}
+                className="font-semibold text-very-dark-grayish-blue lg:text-white"
+              >
+                {text}
+              </a>
             </li>
           ))}
           <li>
-            <a href="/">Contact</a>
+            <a
+              href="/"
+              className="block rounded-full bg-yellow px-7 py-5 font-serif text-sm font-bold uppercase lg:bg-white lg:text-dark-blue"
+            >
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
