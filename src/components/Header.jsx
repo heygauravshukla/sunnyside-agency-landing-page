@@ -40,7 +40,7 @@ export default function Header() {
           <li>
             <a
               href="/"
-              className="block rounded-full bg-yellow px-7 py-5 font-serif text-sm font-bold uppercase lg:bg-white lg:text-dark-blue"
+              className="block rounded-full bg-yellow px-7 py-5 font-serif text-sm font-bold uppercase text-very-dark-desaturated-blue lg:bg-white"
             >
               Contact
             </a>
