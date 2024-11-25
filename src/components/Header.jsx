@@ -12,26 +12,26 @@ export default function Header() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
 
   return (
-    <header className="relative flex items-center justify-between px-[22px] py-8 lg:px-10 lg:py-11">
+    <header className="relative flex items-center justify-between px-6 py-8 xl:px-10 xl:py-8">
       {/* Logo */}
       <a href="/">
-        <img src={logo} alt="Sunnyside logo" className="lg:h-8 lg:w-auto" />
+        <img src={logo} alt="Sunnyside logo" className="xl:h-8" />
       </a>
       {/* Menu Toggler */}
-      <button onClick={() => setIsMenuOpened((m) => !m)} className="lg:hidden">
+      <button onClick={() => setIsMenuOpened((m) => !m)} className="xl:hidden">
         <img src={hamburgerIcon} alt="Menu toggler" />
         <p className="sr-only">Menu</p>
       </button>
       {/* Menu */}
       <nav
-        className={`${!isMenuOpened ? "hidden lg:block" : ""} absolute inset-x-[22px] top-full mt-4 bg-white p-10 before:absolute before:bottom-full before:right-0 before:block before:size-6 before:bg-white before:content-[''] before:[clip-path:polygon(100%_0%,0%_100%,100%_100%)] lg:static lg:mt-0 lg:bg-transparent lg:p-0 lg:before:hidden`}
+        className={`${!isMenuOpened ? "hidden xl:block" : ""} absolute inset-x-6 top-full mt-[1.125rem] bg-white py-10 before:absolute before:bottom-full before:right-0 before:size-6 before:bg-white before:content-[''] before:[clip-path:polygon(100%_0%,0%_100%,100%_100%)] xl:static xl:mt-0 xl:bg-transparent xl:p-0 xl:before:hidden`}
       >
-        <ul className="flex flex-col items-center gap-8 lg:flex-row lg:gap-12">
+        <ul className="flex flex-col items-center gap-8 xl:flex-row xl:gap-12">
           {links.map(({ id, text, href }) => (
             <li key={id}>
               <a
                 href={href}
-                className="font-semibold text-very-dark-grayish-blue lg:text-white"
+                className="text-xl font-semibold text-dark-grayish-blue xl:text-lg xl:text-white"
               >
                 {text}
               </a>
@@ -40,7 +40,7 @@ export default function Header() {
           <li>
             <a
               href="/"
-              className="block rounded-full bg-yellow px-7 py-5 font-serif text-sm font-bold uppercase text-very-dark-desaturated-blue lg:bg-white"
+              className="block rounded-full bg-yellow px-8 py-5 font-serif text-[0.9375rem] font-bold uppercase text-very-dark-desaturated-blue xl:bg-white"
             >
               Contact
             </a>
