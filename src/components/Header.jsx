@@ -31,7 +31,7 @@ export default function Header() {
             <li key={id}>
               <a
                 href={href}
-                className="text-xl font-semibold text-dark-grayish-blue xl:text-lg xl:text-white"
+                className="text-xl font-semibold leading-[1.2] text-dark-grayish-blue xl:text-lg xl:leading-[1.2] xl:text-white"
               >
                 {text}
               </a>
@@ -40,7 +40,7 @@ export default function Header() {
           <li>
             <a
               href="/"
-              className="block rounded-full bg-yellow px-8 py-5 font-serif text-[0.9375rem] font-bold uppercase text-very-dark-desaturated-blue xl:bg-white"
+              className="block rounded-full bg-yellow px-8 py-5 font-serif text-[0.9375rem] font-bold uppercase leading-[1.2] text-very-dark-desaturated-blue xl:bg-white"
             >
               Contact
             </a>
